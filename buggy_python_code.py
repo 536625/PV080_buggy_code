@@ -1,4 +1,5 @@
 import flask
+import urllib
 import yaml
 
 app = flask.Flask(__name__)
@@ -22,8 +23,6 @@ def print_nametag(format_string, person):
 
 
 def fetch_website(url):
-    # Import the requested version (2 or 3) of urllib
-    import urllib
     # Fetch and print the requested URL
 
     try:
