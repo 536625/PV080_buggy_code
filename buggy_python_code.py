@@ -23,7 +23,10 @@ def print_nametag(format_string, person):
 
 def fetch_website(urllib_version, url):
     # Import the requested version (2 or 3) of urllib
-    import urllib as urllib
+    if urlib_version == 2:
+        import urllib2 as urllib
+    elif urlib_version == 3:
+        import urllib3 as urllib
     # Fetch and print the requested URL
 
     try:
